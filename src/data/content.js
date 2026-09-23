@@ -64,11 +64,11 @@ export const siteContent = {
   ],
   footer: {
     address: "123 Innovation Drive, Tech Park, Bangalore 560001",
-    email: "partners@ohyesapp.com",
+    email: "support@ohyesworld.com",
     phone: "+91 98765 43210"
   },
   whatsapp: {
-    number: "919876543210", // Placeholder, user will replace
+    number: "+917356449135", // Placeholder, user will replace
     messageTemplate: "Hi Oh Yes team, I'm interested in turning my parking space into an EV charging station. Here are my details:\n\nName: {name}\nPhone: {phone}\nCity: {city}\nSpace Type: {spaceType}"
   }
 }
