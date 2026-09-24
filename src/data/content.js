@@ -58,14 +58,14 @@ export const siteContent = {
     { q: "What is the upfront cost?", a: "Costs vary depending on the charger type and partner model you choose. We offer flexible plans ranging from full ownership to revenue sharing." },
     { q: "Which charger brands do you provide?", a: "We only install certified chargers from leading brands to ensure safety and compatibility with all EVs in the market." },
     { q: "How often do I get paid?", a: "Payouts are processed automatically every week directly to your registered bank account." },
-    { q: "How long does installation take?", a: "Once approved, installation typically takes 2-4 days depending on site readiness and grid approvals." },
+    { q: "How long does installation take?", a: "Installation time depends on the site conditions, charger type, electrical requirements, and necessary approvals. Our team will provide an estimated timeline after the site assessment." },
     { q: "Who handles maintenance?", a: "Under most of our models, Oh Yes handles routine maintenance and software updates to ensure maximum uptime." },
     { q: "Is it safe to have a public charger at my home?", a: "Yes. All our chargers come with built-in safety features, and the Oh Yes App ensures only verified users can access your station." }
   ],
   footer: {
-    address: "123 Innovation Drive, Tech Park, Bangalore 560001",
+    address: "Oh Yes Home Solutions, Vengoor - Piraroor Rd, Vengoor, Angamaly, kochi, Keralam 683572",
     email: "support@ohyesworld.com",
-    phone: "+91 98765 43210"
+    phone: "+917034444303"
   },
   whatsapp: {
     number: "+917356449135", // Placeholder, user will replace

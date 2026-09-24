@@ -49,7 +49,7 @@
                 </label>
                 <input 
                   type="range" 
-                  min="1" max="12" step="0.5"
+                  min="1" max="24" step="0.5"
                   v-model.number="hoursPerDay"
                   class="w-full accent-[#22E27A] h-2 bg-white/10 rounded-lg appearance-none cursor-pointer"
                 >
