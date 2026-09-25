@@ -8,9 +8,9 @@ export const siteContent = {
     ctaSecondary: "Download App"
   },
   stats: [
-    { label: "Charger Partners", value: 1500, suffix: "+" },
-    { label: "Cities Active", value: 45, suffix: "" },
-    { label: "EV Users", value: 120, suffix: "k+" },
+    { label: "On Going Project", value: 200, suffix: "+" },
+    { label: "Cities Active", value: 50, suffix: "+" },
+    { label: "EV Users in Kerala", value: 120, suffix: "k+" },
     { label: "System Uptime", value: 99.9, suffix: "%" }
   ],
   whyEarn: [
