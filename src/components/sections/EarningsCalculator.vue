@@ -115,7 +115,7 @@ import SectionHeading from '../ui/SectionHeading.vue'
 import RevealOnScroll from '../ui/RevealOnScroll.vue'
 
 const chargers = ref(2)
-const selectedType = ref(content.calculator.chargerTypes[1]) // Default AC 7.4
+const selectedType = ref(content.calculator.chargerTypes[0]) // Default AC - 7.4 kW
 const hoursPerDay = ref(4)
 const profitPerKwh = ref(3)
 

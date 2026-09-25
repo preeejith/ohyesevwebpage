@@ -35,9 +35,12 @@ export const siteContent = {
     title: "Estimate Your Earnings",
     disclaimer: "*Illustrative estimates. Actual earnings vary based on location, usage, and electricity rates.",
     chargerTypes: [
-      { label: "AC 3.3 kW (Slow)", value: 3.3 },
-      { label: "AC 7.4 kW (Fast)", value: 7.4 },
-      { label: "DC 30 kW (Rapid)", value: 30 }
+      // { label: "AC – 7.4 kW", value: 7.4 },
+      // { label: "AC – 11 kW", value: 11 },
+      // { label: "AC – 22 kW", value: 22 },
+      { label: "DC – 30 kW", value: 30 },
+      { label: "DC – 60 kW", value: 60 },
+      { label: "DC – 80–120 kW", value: 100 }
     ]
   },
   partnerModels: [

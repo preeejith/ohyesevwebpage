@@ -10,6 +10,7 @@
       <HowItWorksSection />
       <EarningsCalculator />
       <PartnerModels />
+      <EvInfrastructureSection />
       <ChargerBrands />
       <AppDownloadSection />
       <FaqSection />
@@ -33,6 +34,7 @@ import SpacesSection from './components/sections/SpacesSection.vue'
 import HowItWorksSection from './components/sections/HowItWorksSection.vue'
 import EarningsCalculator from './components/sections/EarningsCalculator.vue'
 import PartnerModels from './components/sections/PartnerModels.vue'
+import EvInfrastructureSection from './components/sections/EvInfrastructureSection.vue'
 import ChargerBrands from './components/sections/ChargerBrands.vue'
 import AppDownloadSection from './components/sections/AppDownloadSection.vue'
 import FaqSection from './components/sections/FaqSection.vue'

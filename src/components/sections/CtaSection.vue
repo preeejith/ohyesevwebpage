@@ -88,10 +88,19 @@
                   </div>
                 </div>
                 
-                <BaseButton type="submit" variant="primary" class="w-full mt-4 flex justify-center items-center gap-2">
-                  <span>Get Free Assessment</span>
-                  <ArrowRight class="w-5 h-5" />
+                <BaseButton type="submit" variant="primary" class="w-full mt-4 flex justify-center items-center gap-2" :disabled="isSubmitting">
+                  <span v-if="!isSubmitting">Get Free Assessment</span>
+                  <span v-else>Submitting...</span>
+                  <ArrowRight v-if="!isSubmitting" class="w-5 h-5" />
                 </BaseButton>
+
+                <!-- Status Messages -->
+                <div v-if="submitStatus === 'success'" class="mt-4 p-3 bg-green-500/20 border border-green-500/50 text-green-400 rounded-xl text-center text-sm">
+                  Thank you! Your request has been sent successfully.
+                </div>
+                <div v-if="submitStatus && submitStatus !== 'success'" class="mt-4 p-3 bg-red-500/20 border border-red-500/50 text-red-400 rounded-xl text-center text-sm">
+                  Oops! Error: {{ submitStatus }}
+                </div>
               </div>
             </form>
           </RevealOnScroll>
@@ -103,11 +112,12 @@
 </template>
 
 <script setup>
-import { reactive } from 'vue'
+import { reactive, ref } from 'vue'
 import { ShieldCheck, ChevronDown, ArrowRight } from '@lucide/vue'
 import { siteContent as content } from '../../data/content'
 import BaseButton from '../ui/BaseButton.vue'
 import RevealOnScroll from '../ui/RevealOnScroll.vue'
+import emailjs from '@emailjs/browser'
 
 const form = reactive({
   name: '',
@@ -116,15 +126,46 @@ const form = reactive({
   spaceType: ''
 })
 
-const submitForm = () => {
-  let template = content.whatsapp.messageTemplate
-  template = template.replace('{name}', form.name)
-  template = template.replace('{phone}', form.phone)
-  template = template.replace('{city}', form.city)
-  template = template.replace('{spaceType}', form.spaceType)
+const isSubmitting = ref(false)
+const submitStatus = ref(null)
+
+const submitForm = async () => {
+  isSubmitting.value = true
+  submitStatus.value = null
   
-  const text = encodeURIComponent(template)
-  const url = `https://wa.me/${content.whatsapp.number}?text=${text}`
-  window.open(url, '_blank')
+  try {
+    // EmailJS credentials
+    const SERVICE_ID = 'service_4wq8dmd'
+    const TEMPLATE_ID = 'template_hemik5q'
+    const PUBLIC_KEY = 'UQ0BvR1PCDqQaQDT7'
+
+    const templateParams = {
+      from_name: form.name,
+      phone_number: form.phone,
+      city: form.city,
+      space_type: form.spaceType,
+    }
+
+    await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY)
+    
+    submitStatus.value = 'success'
+    
+    // Clear form
+    form.name = ''
+    form.phone = ''
+    form.city = ''
+    form.spaceType = ''
+    
+    setTimeout(() => {
+      submitStatus.value = null
+    }, 5000)
+    
+  } catch (error) {
+    console.error('EmailJS Error:', error)
+    // EmailJS often returns the error message in error.text
+    submitStatus.value = error.text || error.message || 'Unknown error. Check console.'
+  } finally {
+    isSubmitting.value = false
+  }
 }
 </script>
