@@ -8,11 +8,17 @@ export const siteContent = {
     ctaSecondary: "Download App"
   },
   stats: [
-    { label: "On Going Project", value: 200, suffix: "+" },
-    { label: "Cities Active", value: 50, suffix: "+" },
-    { label: "EV Users in Kerala", value: 120, suffix: "k+" },
-    { label: "System Uptime", value: 99.9, suffix: "%" }
+    { label: "EVs Registered in 2026", value: 24.54, suffix: " L" },
+    { label: "EV Share of Registrations", value: 10.57, suffix: "%" },
+    { label: "FY 2025–26 EV Registrations", value: 25.46, suffix: " L" },
+    { label: "EV Registrations Per Day", value: 7000, suffix: "+" }
   ],
+  // stats: [
+  //   { label: "On Going Project", value: 200, suffix: "+" },
+  //   { label: "Cities Active", value: 50, suffix: "+" },
+  //   { label: "EV Users in Kerala", value: 120, suffix: "k+" },
+  //   { label: "System Uptime", value: 99.9, suffix: "%" }
+  // ],
   whyEarn: [
     { title: "Passive Income", description: "Turn your unused parking space into a steady revenue stream with minimal effort.", icon: "CircleDollarSign" },
     { title: "Zero Hassle Install", description: "Our expert team handles the entire installation process from site survey to going live.", icon: "Wrench" },
