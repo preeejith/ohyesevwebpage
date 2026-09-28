@@ -13,6 +13,7 @@
           :key="index"
           :delay="index * 100"
         >
+        <!--  -->
           <div class="bg-white/5 border border-white/10 rounded-2xl p-8 h-full hover:bg-white/10 transition-colors duration-300 group">
             <div class="w-14 h-14 rounded-full bg-[#22E27A]/20 flex items-center justify-center mb-6 text-[#22E27A] group-hover:scale-110 group-hover:bg-[#22E27A] group-hover:text-[#0B1220] transition-all duration-300">
               <component :is="icons[card.icon]" class="w-7 h-7" />
