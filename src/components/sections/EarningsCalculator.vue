@@ -63,7 +63,7 @@
                 </label>
                 <input 
                   type="range" 
-                  min="1" max="10" step="0.5"
+                  min="1" max="20" step="0.5"
                   v-model.number="profitPerKwh"
                   class="w-full accent-[#22E27A] h-2 bg-white/10 rounded-lg appearance-none cursor-pointer"
                 >
